@@ -1,4 +1,3 @@
- status parameter specifies the value returned to the parent process.
 #include <stdio.h>
 #include <stdlib.h>
 
