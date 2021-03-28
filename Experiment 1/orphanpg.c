@@ -12,3 +12,6 @@ int main(){
    else if (child_pid==0){       
        sleep(15);
        printf("child process");
+   }
+    return 0;
+}
