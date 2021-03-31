@@ -7,20 +7,20 @@
 void main(){ 
    if(fork()==0){
        sleep(5);
-       printf("first child");
+       printf("child 1");
    }
    else{
        if(fork()==0){
            sleep(2);
-           printf("second child");
+           printf("child 2");
        }
        else{
            if(fork()==0){
-               printf("third child");
+               printf("child 3");
            }
            else{
                sleep(10);
-               printf("parent process");
+               printf("Parent");
                exit(0);
            }
        }

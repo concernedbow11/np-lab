@@ -5,7 +5,11 @@
 #include <unistd.h>
 
 int fact(int x){
-   return x>0?(x * fact(x-1)):1;
+   if(x>0)
+	   return x*fact(x-1);
+	else
+		return 1;
+
 }
 
 void main(){
@@ -13,13 +17,12 @@ void main(){
    printf("enter the value for n\n");
    scanf("%d",&n);
    if(fork()==0){
-       for(int j=1;j<=n;j++){
-           printf("%d\t",fact(j));
-       }
+	   for(int j=1;j<=n;j++){
+		   printf("%d\n",fact(j));
+	   }
    }
    else{
-       wait(NULL);
-       exit(0);
+	   wait(NULL);
+	   exit(0);
    }
-   // child process displaying factorial
 }
